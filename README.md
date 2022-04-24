@@ -1,7 +1,3 @@
 # kosmosJS - engine
 
-a JavaScript engine written in Go.
-
-this is a fork of [goja](https://github.com/dop251/goja), with changes made to it designed specifically for use with kosmosJS.
-
-this is not designed for general use. please use [goja](https://github.com/dop251/goja) instead.
+a modern ECMAScript / JavaScript engine. (fork of [goja](https://github.com/dop251/goja))
