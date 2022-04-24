@@ -3,10 +3,10 @@ package parser
 import (
 	"strings"
 
-	"github.com/dop251/goja/ast"
-	"github.com/dop251/goja/file"
-	"github.com/dop251/goja/token"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/ast"
+	"github.com/kosmosJS/engine/file"
+	"github.com/kosmosJS/engine/token"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 func (self *_parser) parseIdentifier() *ast.Identifier {

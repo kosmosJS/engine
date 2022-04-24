@@ -1,11 +1,11 @@
-package goja
+package engine
 
 import (
 	"fmt"
 	"reflect"
 	"strconv"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 /*

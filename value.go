@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"hash/maphash"
@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"unsafe"
 
-	"github.com/dop251/goja/ftoa"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/ftoa"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 var (

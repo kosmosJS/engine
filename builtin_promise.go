@@ -1,7 +1,7 @@
-package goja
+package engine
 
 import (
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 	"reflect"
 )
 
@@ -580,12 +580,12 @@ func (r *Runtime) wrapPromiseReaction(fObj *Object) func(interface{}) {
 //  loop := NewEventLoop()
 //  loop.Start()
 //  defer loop.Stop()
-//  loop.RunOnLoop(func(vm *goja.Runtime) {
+//  loop.RunOnLoop(func(vm *engine.Runtime) {
 //		p, resolve, _ := vm.NewPromise()
 //		vm.Set("p", p)
 //      go func() {
 //   		time.Sleep(500 * time.Millisecond)   // or perform any other blocking operation
-//			loop.RunOnLoop(func(*goja.Runtime) { // resolve() must be called on the loop, cannot call it here
+//			loop.RunOnLoop(func(*engine.Runtime) { // resolve() must be called on the loop, cannot call it here
 //				resolve(result)
 //			})
 //		}()

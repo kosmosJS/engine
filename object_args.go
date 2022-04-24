@@ -1,6 +1,6 @@
-package goja
+package engine
 
-import "github.com/dop251/goja/unistring"
+import "github.com/kosmosJS/engine/unistring"
 
 type argumentsObject struct {
 	baseObject

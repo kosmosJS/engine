@@ -1,9 +1,9 @@
-package goja
+package engine
 
 import (
 	"math"
 
-	"github.com/dop251/goja/ftoa"
+	"github.com/kosmosJS/engine/ftoa"
 )
 
 func (r *Runtime) numberproto_valueOf(call FunctionCall) Value {

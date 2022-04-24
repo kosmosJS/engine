@@ -1,8 +1,8 @@
-package goja
+package engine
 
 import (
 	"errors"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 	"io"
 	"math"
 	"regexp"

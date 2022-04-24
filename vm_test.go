@@ -1,8 +1,8 @@
-package goja
+package engine
 
 import (
-	"github.com/dop251/goja/parser"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/parser"
+	"github.com/kosmosJS/engine/unistring"
 	"testing"
 )
 

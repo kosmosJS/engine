@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"fmt"
@@ -8,7 +8,7 @@ import (
 	"sort"
 	"strconv"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 type sparseArrayItem struct {

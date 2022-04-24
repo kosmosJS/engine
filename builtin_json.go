@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"bytes"
@@ -10,7 +10,7 @@ import (
 	"strings"
 	"unicode/utf16"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 const hex = "0123456789abcdef"

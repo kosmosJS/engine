@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"errors"
@@ -141,7 +141,7 @@ var (
 		"test/built-ins/RegExp/unicode_restricted_character_class_escape.js":         true,
 		"test/annexB/built-ins/RegExp/prototype/compile/pattern-string-invalid-u.js": true,
 
-		// Because goja parser works in UTF-8 it is not possible to pass strings containing invalid UTF-16 code points.
+		// Because engine parser works in UTF-8 it is not possible to pass strings containing invalid UTF-16 code points.
 		// This is mitigated by escaping them as \uXXXX, however because of this the RegExp source becomes
 		// `\uXXXX` instead of `<the actual UTF-16 code point of XXXX>`.
 		// The resulting RegExp will work exactly the same, but it causes these two tests to fail.

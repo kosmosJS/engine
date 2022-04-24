@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"sort"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 const (

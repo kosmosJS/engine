@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"errors"
@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/dop251/goja/parser"
+	"github.com/kosmosJS/engine/parser"
 )
 
 func TestGlobalObjectProto(t *testing.T) {

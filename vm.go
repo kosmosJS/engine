@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"fmt"
@@ -9,7 +9,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 const (

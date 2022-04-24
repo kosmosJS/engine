@@ -1,8 +1,8 @@
-package goja
+package engine
 
 import (
 	"fmt"
-	"github.com/dop251/goja/parser"
+	"github.com/kosmosJS/engine/parser"
 	"regexp"
 	"strings"
 	"unicode/utf16"

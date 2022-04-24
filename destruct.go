@@ -1,7 +1,7 @@
-package goja
+package engine
 
 import (
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 	"reflect"
 )
 

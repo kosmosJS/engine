@@ -1,10 +1,10 @@
-package goja
+package engine
 
 import (
 	"bytes"
 	"errors"
 	"fmt"
-	"github.com/dop251/goja/file"
+	"github.com/kosmosJS/engine/file"
 	"go/ast"
 	"hash/maphash"
 	"math"
@@ -17,9 +17,9 @@ import (
 
 	"golang.org/x/text/collate"
 
-	js_ast "github.com/dop251/goja/ast"
-	"github.com/dop251/goja/parser"
-	"github.com/dop251/goja/unistring"
+	js_ast "github.com/kosmosJS/engine/ast"
+	"github.com/kosmosJS/engine/parser"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 const (
@@ -1493,7 +1493,7 @@ func(FunctionCall, *Runtime) Value is treated as above, except the *Runtime is a
 func(ConstructorCall) *Object is treated as a native constructor, allowing to use it with the new
 operator:
 
- func MyObject(call goja.ConstructorCall) *goja.Object {
+ func MyObject(call engine.ConstructorCall) *engine.Object {
     // call.This contains the newly created object as per http://www.ecma-international.org/ecma-262/5.1/index.html#sec-13.2.2
     // call.Arguments contain arguments passed to the function
 
@@ -1503,7 +1503,7 @@ operator:
 
     // If return value is a non-nil *Object, it will be used instead of call.This
     // This way it is possible to return a Go struct or a map converted
-    // into goja.Value using ToValue(), however in this case
+    // into engine.Value using ToValue(), however in this case
     // instanceof will not work as expected, unless you set the prototype:
     //
     // instance := &myCustomStruct{}

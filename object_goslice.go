@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"math"
@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"strconv"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 type objectGoSlice struct {

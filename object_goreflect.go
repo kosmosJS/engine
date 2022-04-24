@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"fmt"
@@ -6,8 +6,8 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/dop251/goja/parser"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/parser"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 // JsonEncodable allows custom JSON encoding by JSON.stringify()

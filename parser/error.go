@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"sort"
 
-	"github.com/dop251/goja/file"
-	"github.com/dop251/goja/token"
+	"github.com/kosmosJS/engine/file"
+	"github.com/kosmosJS/engine/token"
 )
 
 const (

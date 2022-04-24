@@ -1,9 +1,9 @@
-package goja
+package engine
 
 import (
 	"fmt"
 	"github.com/dlclark/regexp2"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 	"io"
 	"regexp"
 	"sort"

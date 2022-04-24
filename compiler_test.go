@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"io/ioutil"

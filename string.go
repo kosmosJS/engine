@@ -1,4 +1,4 @@
-package goja
+package engine
 
 import (
 	"io"
@@ -7,7 +7,7 @@ import (
 	"unicode/utf16"
 	"unicode/utf8"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 const (

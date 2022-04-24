@@ -1,4 +1,4 @@
-package goja
+package engine
 
 type weakMap uint64
 

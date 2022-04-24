@@ -1,11 +1,11 @@
-package goja
+package engine
 
 import (
 	"math"
 	"math/bits"
 	"reflect"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 type objectGoSliceReflect struct {

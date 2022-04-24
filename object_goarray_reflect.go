@@ -1,10 +1,10 @@
-package goja
+package engine
 
 import (
 	"reflect"
 	"strconv"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 type objectGoArrayReflect struct {

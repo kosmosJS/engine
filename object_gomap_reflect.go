@@ -1,9 +1,9 @@
-package goja
+package engine
 
 import (
 	"reflect"
 
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 type objectGoMapReflect struct {

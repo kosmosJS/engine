@@ -2,7 +2,7 @@
 Package parser implements a parser for JavaScript.
 
     import (
-        "github.com/dop251/goja/parser"
+        "github.com/kosmosJS/engine/parser"
     )
 
 Parse and return an AST
@@ -39,10 +39,10 @@ import (
 	"io"
 	"io/ioutil"
 
-	"github.com/dop251/goja/ast"
-	"github.com/dop251/goja/file"
-	"github.com/dop251/goja/token"
-	"github.com/dop251/goja/unistring"
+	"github.com/kosmosJS/engine/ast"
+	"github.com/kosmosJS/engine/file"
+	"github.com/kosmosJS/engine/token"
+	"github.com/kosmosJS/engine/unistring"
 )
 
 // A Mode value is a set of flags (or 0). They control optional parser functionality.
