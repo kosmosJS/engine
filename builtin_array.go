@@ -1095,7 +1095,7 @@ func (r *Runtime) arrayproto_findLast(call FunctionCall) Value {
 		This:      call.Argument(1),
 		Arguments: []Value{nil, nil, o},
 	}
-	for k := l-1; k >= 0; k-- {
+	for k := l - 1; k >= 0; k-- {
 		idx := valueInt(k)
 		kValue := o.self.getIdx(idx, nil)
 		fc.Arguments[0], fc.Arguments[1] = kValue, idx
@@ -1135,7 +1135,7 @@ func (r *Runtime) arrayproto_findLastIndex(call FunctionCall) Value {
 		This:      call.Argument(1),
 		Arguments: []Value{nil, nil, o},
 	}
-	for k := l-1; k >= 0; k-- {
+	for k := l - 1; k >= 0; k-- {
 		idx := valueInt(k)
 		kValue := o.self.getIdx(idx, nil)
 		fc.Arguments[0], fc.Arguments[1] = kValue, idx
