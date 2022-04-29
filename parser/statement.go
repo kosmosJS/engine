@@ -6,10 +6,10 @@ import (
 	"io/ioutil"
 	"strings"
 
+	"github.com/go-sourcemap/sourcemap"
 	"github.com/kosmosJS/engine/ast"
 	"github.com/kosmosJS/engine/file"
 	"github.com/kosmosJS/engine/token"
-	"github.com/go-sourcemap/sourcemap"
 )
 
 func (self *_parser) parseBlockStatement() *ast.BlockStatement {
