@@ -558,7 +558,7 @@ func (r *Runtime) typedArrayProto_findLast(call FunctionCall) Value {
 			This:      call.Argument(1),
 			Arguments: []Value{nil, nil, call.This},
 		}
-		for k := ta.length; k >= 0; k-- {
+		for k := ta.length-1; k >= 0; k-- {
 			var val Value
 			if ta.isValidIntegerIndex(k) {
 				val = ta.typedArray.get(ta.offset + k)
@@ -606,7 +606,7 @@ func (r *Runtime) typedArrayProto_findLastIndex(call FunctionCall) Value {
 			This:      call.Argument(1),
 			Arguments: []Value{nil, nil, call.This},
 		}
-		for k := ta.length; k >= 0; k-- {
+		for k := ta.length-1; k >= 0; k-- {
 			if ta.isValidIntegerIndex(k) {
 				fc.Arguments[0] = ta.typedArray.get(ta.offset + k)
 			} else {
