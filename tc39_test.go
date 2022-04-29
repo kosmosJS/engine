@@ -204,6 +204,9 @@ var (
 
 		// Left-hand side as a CoverParenthesizedExpression
 		"test/language/expressions/assignment/fn-name-lhs-cover.js": true,
+
+		// at
+		"test/built-ins/String/prototype/at/returns-code-unit.js": true,
 	}
 
 	featuresBlackList = []string{
@@ -218,11 +221,8 @@ var (
 		"super",
 		"generators",
 		"String.prototype.replaceAll",
-		"String.prototype.at",
 		"resizable-arraybuffer",
 		"array-find-from-last",
-		"Array.prototype.at",
-		"TypedArray.prototype.at",
 		"regexp-named-groups",
 		"regexp-dotall",
 		"regexp-unicode-property-escapes",
