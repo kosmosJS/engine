@@ -33,7 +33,7 @@ func (r *Runtime) builtin_parseInt(call FunctionCall) Value {
 }
 
 func (r *Runtime) builtin_parseFloat(call FunctionCall) Value {
-	m := parseFloatregexp.FindStringSubmatch(call.Argument(0).toString().toTrimmedUTF8())
+	m := parseFloatRegexp.FindStringSubmatch(call.Argument(0).toString().toTrimmedUTF8())
 	if len(m) == 2 {
 		if s := m[1]; s != "" && s != "+" && s != "-" {
 			switch s {
