@@ -2,8 +2,8 @@ package engine
 
 import (
 	"fmt"
-	"github.com/kosmosJS/engine/parser"
 	"github.com/dlclark/regexp2"
+	"github.com/kosmosJS/engine/parser"
 	"strings"
 	"unicode/utf16"
 	"unicode/utf8"
