@@ -3,7 +3,7 @@ package engine
 import (
 	"fmt"
 	"github.com/kosmosJS/engine/parser"
-	"regexp"
+	"github.com/dlclark/regexp2"
 	"strings"
 	"unicode/utf16"
 	"unicode/utf8"
@@ -245,7 +245,7 @@ func compileRegexp(patternStr, flags string) (p *regexpPattern, err error) {
 			re2Str = fmt.Sprintf("(?%s:%s)", re2flags, re2Str)
 		}
 
-		pattern, err1 := regexp.Compile(re2Str)
+		pattern, err1 := regexp2.Compile(re2Str)
 		if err1 != nil {
 			err = fmt.Errorf("Invalid regular expression (re2): %s (%v)", re2Str, err1)
 			return

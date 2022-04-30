@@ -5,7 +5,6 @@ import (
 	"github.com/dlclark/regexp2"
 	"github.com/kosmosJS/engine/unistring"
 	"io"
-	"regexp"
 	"sort"
 	"strings"
 	"unicode/utf16"
@@ -23,7 +22,7 @@ type regexp2Wrapper struct {
 	cache *regexp2MatchCache
 }
 
-type regexpWrapper regexp.Regexp
+type regexpWrapper regexp2.Regexp
 
 type positionMapItem struct {
 	src, dst int
@@ -456,7 +455,7 @@ func (r *regexp2Wrapper) clone() *regexp2Wrapper {
 }
 
 func (r *regexpWrapper) findAllSubmatchIndex(s string, limit int, sticky bool) (results [][]int) {
-	wrapped := (*regexp.Regexp)(r)
+	wrapped := (*regexp2.Regexp)(r)
 	results = wrapped.FindAllStringSubmatchIndex(s, limit)
 	pos := 0
 	if sticky {
@@ -484,12 +483,12 @@ func (r *regexpWrapper) findSubmatchIndex(s valueString, fullUnicode bool) []int
 }
 
 func (r *regexpWrapper) findSubmatchIndexASCII(s string) []int {
-	wrapped := (*regexp.Regexp)(r)
+	wrapped := (*regexp2.Regexp)(r)
 	return wrapped.FindStringSubmatchIndex(s)
 }
 
 func (r *regexpWrapper) findSubmatchIndexUnicode(s unicodeString, fullUnicode bool) (result []int) {
-	wrapped := (*regexp.Regexp)(r)
+	wrapped := (*regexp2.Regexp)(r)
 	if fullUnicode {
 		posMap, runes, _, _ := buildPosMap(&lenientUtf16Decoder{utf16Reader: s.utf16Reader(0)}, s.length(), 0)
 		res := wrapped.FindReaderSubmatchIndex(&arrayRuneReader{runes: runes})

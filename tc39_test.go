@@ -15,7 +15,7 @@ import (
 )
 
 const (
-	tc39BASE = "testdata/test262"
+	tc39BASE = "test262"
 )
 
 var (
