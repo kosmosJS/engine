@@ -30,8 +30,8 @@ jobs:
       - name: Checkout tc39 tests
         uses: GuillaumeFalourd/clone-github-repo-action@v2
         with:
-          owner: test262
-          repository: tc39
+          owner: tc39
+          repository: test262
       - name: Run tests
         env:
           GOARCH: ${{ matrix.arch }}
