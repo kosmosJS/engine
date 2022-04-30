@@ -28,7 +28,10 @@ jobs:
           cache-key: ${{ matrix.go-version }}
         if: ${{ matrix.go-version == '1.x' }}
       - name: Checkout tc39 tests
-        run: ./.tc39_test262_checkout.sh
+        uses: GuillaumeFalourd/clone-github-repo-action@v2
+        with:
+          owner: test262
+          repository: tc39
       - name: Run tests
         env:
           GOARCH: ${{ matrix.arch }}
