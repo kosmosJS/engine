@@ -1,4 +1,2 @@
-.idea
-*.iml
-testdata/test262
+test262
 goorm.manifest

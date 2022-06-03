@@ -6,6 +6,19 @@ import (
 	"github.com/kosmosJS/engine/ftoa"
 )
 
+func isNumber(v Value) bool {
+	switch t := v.(type) {
+	case valueFloat, valueInt:
+		return true
+	case *Object:
+		switch t := t.self.(type) {
+		case *primitiveValueObject:
+			return isNumber(t.pValue)
+		}
+	}
+	return false
+}
+
 func (r *Runtime) numberproto_valueOf(call FunctionCall) Value {
 	this := call.This
 	if !isNumber(this) {
@@ -21,19 +34,6 @@ func (r *Runtime) numberproto_valueOf(call FunctionCall) Value {
 	}
 
 	panic(r.NewTypeError("Number.prototype.valueOf is not generic"))
-}
-
-func isNumber(v Value) bool {
-	switch t := v.(type) {
-	case valueFloat, valueInt:
-		return true
-	case *Object:
-		switch t := t.self.(type) {
-		case *primitiveValueObject:
-			return isNumber(t.pValue)
-		}
-	}
-	return false
 }
 
 func (r *Runtime) numberproto_toString(call FunctionCall) Value {
